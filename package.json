@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prestart:express": "sequelize db:migrate && sequelize db:seed:all --debug",
+    "start:express": "nodemon ./src/express/index.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +18,31 @@
   "bugs": {
     "url": "https://github.com/dobchodgg/node-js/issues"
   },
-  "homepage": "https://github.com/dobchodgg/node-js#readme"
+  "homepage": "https://github.com/dobchodgg/node-js#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "express-validator": "^6.15.0",
+    "lodash": "^4.17.21",
+    "pg": "^8.9.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.29.0",
+    "sequelize-cli": "^6.6.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.35.0",
+    "eslint-config-node": "^4.1.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsdoc": "^40.0.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.8.4"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
 }
