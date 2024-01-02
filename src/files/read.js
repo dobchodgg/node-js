@@ -1,10 +1,16 @@
 const fs = require('fs').promises;
 const path = require('path');
 
+/**
+ * @param {string} folderName
+ */
 async function findSalesFiles(folderName) {
   // this array will hold sales files as they are found
   const salesFiles = [];
 
+  /**
+   * @param {string} folderName
+   */
   async function findFiles(folderName) {
     // read all the items in the current folder
     const items = await fs.readdir(folderName, { withFileTypes: true });
@@ -32,6 +38,9 @@ async function findSalesFiles(folderName) {
   return salesFiles;
 }
 
+/**
+ *
+ */
 async function main() {
   const salesDir = path.join(__dirname, 'stores');
   const salesFiles = await findSalesFiles(salesDir);

@@ -3,7 +3,6 @@ const { validateData } = require('../schema');
 
 /**
  * Create and Save a new product
- *
  * @param {import('express').Request} req
  * @param {import('express').Response} res
  */
@@ -29,7 +28,6 @@ exports.create = async (req, res) => {
 
 /**
  * Retrieve all products from the database
- *
  * @param {import('express').Request} req
  * @param {import('express').Response} res
  */
@@ -45,7 +43,6 @@ exports.findAll = async (req, res) => {
 
 /**
  * Retrieve all products from the database
- *
  * @param {import('express').Request} req
  * @param {import('express').Response} res
  */
@@ -74,7 +71,6 @@ exports.quantitiesByProductId = async (req, res) => {
 
 /**
  * Find a single product with an id
- *
  * @param {import('express').Request} req
  * @param {import('express').Response} res
  */
@@ -96,7 +92,6 @@ exports.findOne = async (req, res) => {
 
 /**
  * Update a product by the id in the request
- *
  * @param {import('express').Request} req
  * @param {import('express').Response} res
  */
@@ -128,7 +123,6 @@ exports.update = async (req, res) => {
 
 /**
  * Delete a product with the specified id in the request
- *
  * @param {import('express').Request} req
  * @param {import('express').Response} res
  */
