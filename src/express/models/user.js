@@ -1,6 +1,6 @@
-const { Sequelize, DataTypes } = require('sequelize');
-const { RIGHTS } = require('../constants');
-const bcrypt = require('bcrypt');
+import bcrypt from 'bcrypt';
+import { DataTypes } from 'sequelize';
+import { RIGHTS } from '../constants';
 
 /**
  * @typedef User
@@ -16,10 +16,10 @@ const bcrypt = require('bcrypt');
  */
 
 /**
- * @param {Sequelize} sequelize
+ * @param {import('sequelize').Sequelize} sequelize
  * @returns {UserModel}
  */
-module.exports = (sequelize) => {
+export default (sequelize) => {
   const User = sequelize.define(
     'User',
     {

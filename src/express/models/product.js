@@ -1,4 +1,4 @@
-const { Sequelize, DataTypes, Model } = require('sequelize');
+import { DataTypes } from 'sequelize';
 
 /**
  * @typedef Product
@@ -11,14 +11,14 @@ const { Sequelize, DataTypes, Model } = require('sequelize');
  * @property {string} deleted
  * @property {import('./product-quantity').ProductQuantity[]} [quantities]
  * @typedef {Omit<Product, 'id' | 'created' | 'updated' | 'deleted'>} CreateProduct
- * @typedef {import('sequelize').ModelStatic<Model<Product, CreateProduct>>} ProductModel
+ * @typedef {import('sequelize').ModelStatic<import('sequelize').Model<Product, CreateProduct>>} ProductModel
  */
 
 /**
- * @param {Sequelize} sequelize
+ * @param {import('sequelize').Sequelize} sequelize
  * @returns {ProductModel}
  */
-module.exports = (sequelize) => {
+export default (sequelize) => {
   const Product = sequelize.define(
     'Product',
     {

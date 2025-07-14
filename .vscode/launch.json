@@ -11,8 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/src/debug/index.js",
-            "runtimeExecutable": "/Users/dobchodgg/.nvm/versions/node/v14.20.1/bin/node"
+            "program": "${workspaceFolder}/src/debug/index.mjs",
         }
     ]
 }

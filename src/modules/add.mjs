@@ -9,6 +9,4 @@ const parseOrder = function parseOrder(order) {
   return match?.groups;
 };
 
-module.exports = {
-  parseOrder
-};
+export { parseOrder };
