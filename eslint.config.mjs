@@ -7,6 +7,9 @@ import globals from 'globals';
 
 export default defineConfig([
   {
+    ignores: ['eslint.config.mjs']
+  },
+  {
     files: ['**/*.{js,mjs,cjs}'],
     languageOptions: {
       globals: globals.node,
