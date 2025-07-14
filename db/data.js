@@ -1,6 +1,5 @@
-const bcrypt = require('bcrypt');
-const { RIGHTS } = require('../src/express/constants');
-const { v4 } = require('uuid');
+import { v4 } from 'uuid';
+import { RIGHTS } from '../src/express/constants';
 
 const users = (password) => {
   return [
@@ -123,4 +122,4 @@ const productQuantities = products.reduce((acc, cur, index) => {
   return acc;
 }, []);
 
-module.exports = { users, warehouses, products, productQuantities };
+export { productQuantities, products, users, warehouses };
