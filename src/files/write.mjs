@@ -56,8 +56,8 @@ async function findSalesFiles(folderName) {
  *
  */
 async function main() {
-  const salesDir = path.join(__dirname, 'stores');
-  const salesTotalsDir = path.join(__dirname, 'salesTotals');
+  const salesDir = path.join(import.meta.dirname, 'stores');
+  const salesTotalsDir = path.join(import.meta.dirname, 'salesTotals');
 
   // create the salesTotal directory if it doesn't exist
   try {

@@ -42,7 +42,7 @@ async function findSalesFiles(folderName) {
  *
  */
 async function main() {
-  const salesDir = path.join(__dirname, 'stores');
+  const salesDir = path.join(import.meta.dirname, 'stores');
   const salesFiles = await findSalesFiles(salesDir);
   console.log(salesFiles);
 }

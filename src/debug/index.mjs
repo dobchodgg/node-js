@@ -33,7 +33,7 @@ function convertToCurrency(value, sourceCurrency, targetCurrency) {
  * @param {number} value
  */
 function formatValueForDisplay(value) {
-  return value.toFixed(2);
+  return value ? value.toFixed(2) : '0.00';
 }
 
 /**
